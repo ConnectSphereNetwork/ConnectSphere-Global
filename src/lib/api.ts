@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Use environment variables for the API URL, with a fallback for local development
-export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://connectsphere-hcim.onrender.com";
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://connectsphere-hcim.onrender.com/";
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
