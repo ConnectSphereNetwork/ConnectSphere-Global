@@ -3,7 +3,13 @@
 import type * as React from "react"
 import { cn } from "@/lib/utils"
 
-export default function AuthScene({ children, className }: { children: React.ReactNode; className?: string }) {
+export default function AuthScene({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
   return (
     <div className={cn("relative min-h-dvh overflow-hidden bg-background text-foreground", className)}>
       {/* Ambient glow orbs */}

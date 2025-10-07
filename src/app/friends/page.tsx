@@ -6,9 +6,7 @@ import Header from "@/components/Header";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import { Button } from "@/components/ui/button";
 import { deleteJson, getJson } from "@/lib/api";
-// import { getJson, deleteJson } from "@/utils/api"; // Corrected import path
 
-// Define a type for a Friend object
 interface Friend {
   _id: string;
   username: string;

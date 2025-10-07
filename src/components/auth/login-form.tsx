@@ -18,9 +18,8 @@ export default function LoginForm() {
     setError(null)
     setPending(true)
     try {
-      // Backend expected to set auth cookie via Set-Cookie header
       await postJson("/api/auth/login", { email, password })
-      router.push("/dashboard")
+      router.push("/")
       router.refresh()
     } catch (err: any) {
       setError(err?.message || "Unable to sign in. Please try again.")

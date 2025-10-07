@@ -4,16 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack --no-lint",
-
-    
+    "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "@geist-ui/react": "^2.2.5",
     "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-scroll-area": "^1.2.10",
     "@radix-ui/react-slot": "^1.2.3",
     "@vercel/analytics": "^1.5.0",
     "axios": "^1.12.2",
@@ -27,6 +27,7 @@
     "react-hook-form": "^7.64.0",
     "socket.io-client": "^4.8.1",
     "sonner": "^2.0.7",
+    "swr": "^2.3.6",
     "tailwind-merge": "^3.3.1",
     "zod": "^4.1.12"
   },
