@@ -277,3 +277,20 @@
     background: oklch(0.269 0 0);
   }
 }
+
+
+/* Custom styled scrollbar for a modern look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--ring));
+}

@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
-import { AuthProvider } from "@/context/AuthContext"; // 1. Import AuthProvider
+import { AuthProvider } from "@/context/AuthContext";
+import { NotificationProvider } from '@/context/NotificationContext';
+import { OnlineStatusProvider } from '@/context/OnlineStatusContext';
 import "./globals.css";
 
 import { Inter, Roboto_Mono } from "next/font/google";
@@ -34,7 +36,11 @@ export default function RootLayout({
           >
             {/* 2. Wrap children with AuthProvider */}
             <AuthProvider>
+                <NotificationProvider>
+              <OnlineStatusProvider> 
               {children}
+            </OnlineStatusProvider>
+            </NotificationProvider>
             </AuthProvider>
             <Analytics />
           </ThemeProvider>

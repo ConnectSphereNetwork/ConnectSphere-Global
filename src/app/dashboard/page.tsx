@@ -15,6 +15,8 @@ import { useState } from "react"
 import { postJson } from "@/lib/api"
 import AuthScene from "@/components/auth/auth-scene"
 
+import PushNotificationManager from "@/components/PushNotificationManager";
+
 function DashboardPage() {
   const { user } = useAuth()
   const router = useRouter()
@@ -74,6 +76,11 @@ function DashboardPage() {
                     )}
                   </Button>
                 </div>
+
+                 <div className="mt-6 border-t pt-4">
+                  <PushNotificationManager />
+                </div>
+                
               </CardContent>
             </Card>
           </section>
