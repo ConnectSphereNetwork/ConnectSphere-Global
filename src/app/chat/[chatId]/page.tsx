@@ -124,7 +124,7 @@ export default function ChatRoomPage() {
   return (
     <ProtectedRoute>
       <div className="flex flex-col h-screen">
-        <Header />
+        {/* <Header /> */}
         <main className="flex-1 flex flex-col min-h-0 container mx-auto w-full py-4">
           <Card className="flex-1 flex flex-col min-h-0">
             <ChatHeader 

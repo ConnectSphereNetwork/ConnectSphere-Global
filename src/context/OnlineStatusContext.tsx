@@ -36,9 +36,11 @@ export const OnlineStatusProvider = ({ children }: { children: ReactNode }) => {
     if (!socket) return;
 
     const handleUserOnline = ({ userId }: { userId: string }) => {
+          console.log('--- FRONTEND RECEIVED: userOnline event for', userId, '---'); 
       setOnlineUsers(prev => new Set(prev).add(userId));
     };
     const handleUserOffline = ({ userId }: { userId: string }) => {
+       console.log('--- FRONTEND RECEIVED: userOffline event for', userId, '---');
       setOnlineUsers(prev => {
         const newSet = new Set(prev);
         newSet.delete(userId);
